@@ -123,7 +123,7 @@ function App() {
           <div className="hero-grid shell">
             <div className="hero-copy" data-reveal="hero-copy">
               <p className="eyebrow">Future-ready digital agency</p>
-              <h1>We build digital experiences that feel advanced before users even click.</h1>
+              <h1>We build what's next.</h1>
               <p className="lead">
                 Nexlyte creates premium websites, apps, and digital systems for businesses, startups,
                 and creators who want modern execution with real brand presence.
@@ -196,38 +196,57 @@ function App() {
           <div className="shell editorial-shell">
             <div className="section-heading" data-reveal="section-left">
               <p className="eyebrow">Section 02</p>
-              <h2>Editorial storytelling inspired by premium food and hospitality experiences.</h2>
+              <h2>Food-led storytelling with a richer, more immersive hospitality-style layout.</h2>
               <p>
-                This gives the homepage a different emotional texture: more visual, more immersive, and more
-                cinematic than the services section.
+                This section now behaves like a premium restaurant campaign site: image-first, atmospheric,
+                and more expressive than the clean commerce blocks before it.
               </p>
             </div>
 
-            <div className="editorial-grid">
-              <article className="feature-case large-case" data-reveal="image-mask">
-                <div className="case-media warm-gradient"></div>
+            <div className="food-grid">
+              <article className="feature-case food-feature" data-reveal="food-pan">
+                <div className="case-photo-wrap">
+                  <img
+                    className="case-photo"
+                    src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+                    alt="Warm restaurant interior with plated food"
+                  />
+                </div>
                 <div className="case-copy">
                   <p className="eyebrow">Featured build</p>
                   <h3>Restaurant-style depth for brands that need a memorable digital atmosphere.</h3>
                   <p>
-                    Oversized typography, image-first pacing, and rich color contrast create premium narrative flow.
+                    Editorial pacing, warm food photography, and dramatic contrast make the section feel like
+                    a premium dining brand launch instead of a standard agency showcase.
                   </p>
                 </div>
               </article>
 
-              <article className="feature-case" data-reveal="image-mask">
-                <div className="case-media cool-gradient"></div>
+              <article className="feature-case food-card" data-reveal="food-slide-left">
+                <div className="case-photo-wrap compact">
+                  <img
+                    className="case-photo"
+                    src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80"
+                    alt="Plated gourmet dish"
+                  />
+                </div>
                 <div className="case-copy">
-                  <h3>Campaign pages</h3>
-                  <p>Focused, visual landing pages for launches, drops, and creator promotions.</p>
+                  <h3>Signature dish presentation</h3>
+                  <p>Close-up visuals, elevated typography, and strong contrast for an appetizing first read.</p>
                 </div>
               </article>
 
-              <article className="feature-case" data-reveal="image-mask">
-                <div className="case-media lime-gradient"></div>
+              <article className="feature-case food-card food-dark" data-reveal="food-slide-up">
+                <div className="case-photo-wrap compact">
+                  <img
+                    className="case-photo"
+                    src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80"
+                    alt="Dessert and coffee table setting"
+                  />
+                </div>
                 <div className="case-copy">
-                  <h3>Immersive showcases</h3>
-                  <p>High-contrast pages that elevate perceived quality before users read the details.</p>
+                  <h3>Menu mood and atmosphere</h3>
+                  <p>Layered images, quieter text blocks, and slower motion create a more premium hospitality tone.</p>
                 </div>
               </article>
             </div>
