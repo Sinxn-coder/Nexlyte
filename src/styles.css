@@ -10,7 +10,6 @@
   --cyan: #79f3ff;
   --lime: #a7ff60;
   --gold: #f1bc73;
-  --container: min(1180px, calc(100vw - 48px));
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.36);
   --radius-xl: 36px;
   --radius-lg: 26px;
@@ -65,8 +64,8 @@ textarea {
 }
 
 .shell {
-  width: var(--container);
-  margin: 0 auto;
+  width: 100%;
+  padding-inline: clamp(24px, 5vw, 72px);
 }
 
 .site-header {
@@ -86,8 +85,7 @@ textarea {
 }
 
 .header-inner {
-  width: var(--container);
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -224,6 +222,16 @@ textarea {
 .contact-copy,
 .section-heading {
   max-width: 700px;
+}
+
+.hero-grid,
+.commerce-grid,
+.food-grid,
+.process-grid,
+.mobile-grid,
+.proof-grid,
+.contact-grid {
+  width: 100%;
 }
 
 .pill-row {
@@ -826,10 +834,6 @@ textarea {
 }
 
 @media (max-width: 720px) {
-  :root {
-    --container: min(100vw - 32px, 1180px);
-  }
-
   .nav-links,
   .text-link {
     display: none;
