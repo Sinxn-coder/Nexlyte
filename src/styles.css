@@ -306,7 +306,7 @@ textarea {
   position: absolute;
   inset: 18% 12%;
   padding: 32px;
-  border-radius: var(--radius-xl);
+  border-radius: 0;
   animation: floatPanel 5.6s ease-in-out infinite;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.04);
@@ -322,6 +322,7 @@ textarea {
 .chip {
   position: absolute;
   background: rgba(5, 6, 10, 0.88);
+  border-radius: 0;
 }
 
 .chip-top {
@@ -525,7 +526,7 @@ textarea {
 
 .device {
   position: absolute;
-  border-radius: 38px;
+  border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
@@ -557,7 +558,7 @@ textarea {
   bottom: 8%;
   max-width: 260px;
   padding: 22px;
-  border-radius: var(--radius-md);
+  border-radius: 0;
   animation: notePulse 5.2s ease-in-out infinite;
 }
 
@@ -675,7 +676,7 @@ textarea {
   width: 100%;
   padding: 15px 16px;
   color: var(--text);
-  border-radius: 16px;
+  border-radius: 0;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.04);
   outline: none;
