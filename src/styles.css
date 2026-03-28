@@ -155,11 +155,18 @@ textarea {
 .panel {
   position: relative;
   min-height: 100vh;
-  padding: 104px 0;
+  padding: 0;
   display: grid;
   align-items: center;
   overflow: clip;
   scroll-snap-align: start;
+}
+
+.panel > .shell {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding-block: 104px;
 }
 
 .hero-panel {
@@ -340,18 +347,18 @@ textarea {
 .proof-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: 48px;
 }
 
 .service-card {
   position: relative;
   overflow: hidden;
-  padding: 0 0 26px;
+  padding: 0 0 32px;
   border: 0;
   background: transparent;
   box-shadow: none;
   border-radius: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .service-card::after {
@@ -401,11 +408,12 @@ textarea {
 .food-grid {
   display: grid;
   grid-template-columns: 1.45fr 1fr 1fr;
-  gap: 24px;
+  gap: 0;
+  align-items: stretch;
 }
 
 .feature-case {
-  overflow: hidden;
+  overflow: visible;
   border-radius: 0;
   border: 0;
   background: transparent;
@@ -414,10 +422,12 @@ textarea {
 
 .food-feature {
   grid-row: span 2;
+  padding-right: 40px;
 }
 
 .food-card {
   align-self: start;
+  padding-left: 40px;
 }
 
 .food-dark {
@@ -428,6 +438,7 @@ textarea {
   position: relative;
   min-height: 460px;
   overflow: hidden;
+  border-radius: 0;
 }
 
 .case-photo-wrap.compact {
@@ -472,7 +483,7 @@ textarea {
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  gap: 40px;
 }
 
 .process-card {
@@ -567,9 +578,10 @@ textarea {
 
 .feature-list li {
   padding: 16px 18px;
-  border-radius: 16px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -595,6 +607,15 @@ textarea {
   border: 0;
   background: transparent;
   box-shadow: none;
+}
+
+.proof-grid {
+  align-items: start;
+}
+
+.quote-card {
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .quote-card span,
@@ -623,10 +644,11 @@ textarea {
   display: grid;
   gap: 18px;
   padding: 28px;
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: var(--shadow);
+  border-radius: 0;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  box-shadow: none;
 }
 
 .contact-card label {
@@ -831,6 +853,12 @@ textarea {
   .device-stage {
     min-height: 520px;
   }
+
+  .food-feature,
+  .food-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 720px) {
@@ -841,7 +869,11 @@ textarea {
 
   .panel {
     min-height: auto;
-    padding: 86px 0;
+  }
+
+  .panel > .shell {
+    min-height: auto;
+    padding-block: 86px;
   }
 
   .hero-copy h1,
