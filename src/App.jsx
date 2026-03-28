@@ -107,14 +107,6 @@ function App() {
             ))}
           </nav>
 
-          <div className="header-actions">
-            <a className="text-link" href="#work">
-              View Work
-            </a>
-            <a className="button button-primary" href="#contact">
-              Start Project
-            </a>
-          </div>
         </div>
       </header>
 
