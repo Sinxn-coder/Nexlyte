@@ -251,6 +251,10 @@ textarea {
   margin-top: 28px;
 }
 
+.hero-copy .eyebrow {
+  padding-left: 6px;
+}
+
 .pill-row span,
 .signal-row span,
 .chip,
