@@ -32,6 +32,7 @@ body {
     radial-gradient(circle at top, rgba(0, 221, 255, 0.08), transparent 28%),
     linear-gradient(180deg, #05060a 0%, #090c12 100%);
   scroll-snap-type: y proximity;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -158,7 +159,7 @@ textarea {
   padding: 0;
   display: grid;
   align-items: center;
-  overflow: clip;
+  overflow: visible;
   scroll-snap-align: start;
 }
 
@@ -229,6 +230,10 @@ textarea {
 .contact-copy,
 .section-heading {
   max-width: 700px;
+}
+
+.hero-copy {
+  max-width: 860px;
 }
 
 .hero-grid,
@@ -881,6 +886,13 @@ textarea {
   .mobile-copy h2,
   .contact-copy h2 {
     font-size: clamp(2rem, 11vw, 3.25rem);
+  }
+
+  .hero-copy,
+  .mobile-copy,
+  .contact-copy,
+  .section-heading {
+    max-width: 100%;
   }
 
   .header-actions,
