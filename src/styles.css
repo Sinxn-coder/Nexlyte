@@ -724,14 +724,17 @@ textarea {
 
 [data-reveal="food-pan"] {
   transform: translateX(-48px) scale(0.98);
+  clip-path: inset(0 0 18% 0);
 }
 
 [data-reveal="food-slide-left"] {
   transform: translateX(44px) translateY(18px);
+  clip-path: inset(0 0 18% 0);
 }
 
 [data-reveal="food-slide-up"] {
   transform: translateY(44px) scale(0.96);
+  clip-path: inset(0 0 18% 0);
 }
 
 [data-reveal="step-lift"] {
@@ -757,7 +760,7 @@ textarea {
 [data-reveal].is-visible {
   opacity: 1;
   transform: none;
-  clip-path: inset(0 0 0 0 round 36px);
+  clip-path: inset(0 0 0 0);
 }
 
 @keyframes rotateSlow {
