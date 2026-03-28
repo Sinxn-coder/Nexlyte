@@ -166,7 +166,6 @@ function App() {
         <section className="panel commerce-panel" id="services">
           <div className="shell">
             <div className="section-heading" data-reveal="section-up">
-              <p className="eyebrow">Section 01</p>
               <h2>E-commerce-inspired service framing with strong product-style hierarchy.</h2>
               <p>
                 This section uses storefront logic so the services feel tangible, premium, and easy to buy
@@ -195,7 +194,6 @@ function App() {
         <section className="panel editorial-panel" id="work">
           <div className="shell editorial-shell">
             <div className="section-heading" data-reveal="section-left">
-              <p className="eyebrow">Section 02</p>
               <h2>Food-led storytelling with a richer, more immersive hospitality-style layout.</h2>
               <p>
                 This section now behaves like a premium restaurant campaign site: image-first, atmospheric,
@@ -256,7 +254,6 @@ function App() {
         <section className="panel process-panel" id="process">
           <div className="shell">
             <div className="section-heading" data-reveal="section-up">
-              <p className="eyebrow">Section 03</p>
               <h2>SaaS-style process communication to make the build feel disciplined and reliable.</h2>
               <p>
                 The visual language changes here to a cleaner, interface-led rhythm so the agency feels structured,
@@ -293,7 +290,6 @@ function App() {
             </div>
 
             <div className="mobile-copy" data-reveal="section-right">
-              <p className="eyebrow">Section 04</p>
               <h2>Startup and mobile-product energy without losing the brand-site polish.</h2>
               <p>
                 This section borrows from app launch websites to show Nexlyte can build for founders, platforms,
@@ -315,7 +311,6 @@ function App() {
         <section className="panel proof-panel" id="proof">
           <div className="shell">
             <div className="section-heading" data-reveal="section-up">
-              <p className="eyebrow">Section 05</p>
               <h2>Luxury-style proof with calmer spacing and cleaner motion before the close.</h2>
               <p>
                 The motion slows down here so the trust layer feels expensive, controlled, and intentionally minimal.
