@@ -94,19 +94,27 @@ function App() {
     <div className="app-shell">
       <header className="site-header" ref={headerRef}>
         <div className="header-inner">
-          <a className="brand" href="#hero" aria-label="Nexlyte home">
-            <span className="brand-mark"></span>
-            <span className="brand-text">Nexlyte</span>
-          </a>
+          <div className="header-brand-group">
+            <a className="brand" href="#hero" aria-label="Nexlyte home">
+              <span className="brand-mark"></span>
+              <span className="brand-lockup">
+                <span className="brand-text">Nexlyte</span>
+                <span className="brand-subtext">Digital agency</span>
+              </span>
+            </a>
+          </div>
 
           <nav className="nav-links" aria-label="Primary navigation">
             {navLinks.map((item) => (
               <a key={item.href} href={item.href}>
-                {item.label}
+                <span>{item.label}</span>
               </a>
             ))}
           </nav>
 
+          <a className="header-cta" href="#contact">
+            <span>Let&apos;s Talk</span>
+          </a>
         </div>
       </header>
 
