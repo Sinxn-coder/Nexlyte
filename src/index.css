@@ -1,119 +1,283 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
-
 :root {
-  --color-primary: #d29d47; /* Gold/Bronze */
-  --color-primary-hover: #b58235;
-  --color-background: #fdfaf3; /* Cream/Vanilla */
-  --color-surface: #ffffff;
-  --color-text-dark: #121526;
-  --color-text-muted: #5e6270;
-  --color-navy: #0f142b; /* Footer / Dark sections */
-  --color-border: #e6dfcf;
+  font-family: 'Space Grotesk', system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-  --font-serif: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
+  color-scheme: dark;
+  --bg: #030303;
+  --surface: #0a0a0a;
+  --surface-bright: #141414;
+  --line: rgba(255, 255, 255, 0.05);
+  --text: #ffffff;
+  --text-muted: #888888;
+  --accent: #00f0ff;
+  --accent-purple: #9d00ff;
+  --accent-glow: rgba(0, 240, 255, 0.1);
+  --brand-red: #ff2136;
 
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
-  --transition-slow: 0.5s ease-out;
-
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
-  --radius-md: 12px;
-  --radius-lg: 24px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-software-grayscale: grayscale;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  cursor: none !important;
+}
+
+html, body {
+  cursor: none !important;
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: var(--color-background);
-  color: var(--color-text-dark);
-  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  line-height: 1.2;
+#root {
+  width: 100%;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  font-family: var(--font-sans);
-}
-
-.btn-primary {
-  background-color: var(--color-primary);
-  color: white;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: all var(--transition-normal);
-  display: inline-block;
-}
-
-.btn-primary:hover {
-  background-color: var(--color-primary-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-outline {
-  border: 1px solid white;
-  color: white;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: 500;
-  transition: all var(--transition-normal);
-  display: inline-block;
-  background: transparent;
-}
-
-.btn-outline:hover {
-  background-color: white;
-  color: var(--color-text-dark);
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
 
 .container {
-  width: 100%;
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* Utilities */
-.text-center { text-align: center; }
+/* Custom Cursor Elements */
+.cursor-lens {
+  width: 20px;
+  height: 20px;
+  background: white; 
+  border-radius: 50%;
+  position: fixed;
+  top: 0; left: 0;
+  pointer-events: none;
+  z-index: 100000;
+  transform: translate(calc(var(--cursor-x, 0px) - 10px), calc(var(--cursor-y, 0px) - 10px));
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), height 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.05s linear;
+  mix-blend-mode: difference;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor-lens {
+    display: none !important;
+  }
+  * {
+    cursor: auto !important;
+  }
+}
+
+/* Hover state for interactive elements */
+.is-hovering .cursor-lens {
+  width: 20px;
+  height: 20px;
+  transform: translate(calc(var(--cursor-x, 0px) - 10px), calc(var(--cursor-y, 0px) - 10px));
+  background: white;
+}
+
+/* Bento Card Style - Static */
+.bento-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  background: var(--surface-bright);
+  border-color: var(--accent);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 240, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.text-glow {
+  text-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+}
+
+.purple-glow {
+  text-shadow: 0 0 30px rgba(157, 0, 255, 0.3);
+}
+
+/* Typography Utils */
 .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  margin-bottom: 24px;
 }
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  max-width: 600px;
-  margin: 0 auto 3rem;
+
+.ecommerce-title {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
+
+.gradient-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #888888 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+/* Button Refine - Static */
+.btn-premium {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: var(--accent);
+  color: black;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  font-family: inherit;
+}
+
+.btn-premium:hover {
+  background: white;
+}
+
+.btn-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 40px;
+  background: var(--brand-red);
+  color: white;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  font-family: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: transform 0.2s;
+}
+
+.btn-brand:hover {
+  transform: scale(1.05);
+  background: #ff3c4d;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: white;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: white;
+}
+
+/* Static Mesh Grid Background */
+.mesh-grid {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  background-image: 
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(1000px) rotateX(45deg);
+  transform-origin: top;
+  mask-image: radial-gradient(circle at center, black 0%, transparent 80%);
+  z-index: -1;
+  opacity: 0.15;
+}
+
+/* Chromatic Theme Utilities */
+.bg-white { background-color: #ffffff; }
+.bg-rose { background-color: #ffe4e1; } 
+.bg-brand-red { background-color: var(--brand-red); }
+.text-obsidian { color: #030303; }
+.text-slate { color: #475569; }
+.text-brand-red { color: var(--brand-red); }
+
+/* Custom Scrollbar for Product Grid */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up-cart {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-ring {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(217, 244, 58, 0.1);
+  border-radius: 50%;
+  border-top-color: #d9f43a;
+  animation: spin 1s ease-in-out infinite;
+}
+
