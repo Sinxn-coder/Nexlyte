@@ -18,8 +18,8 @@ const Projects = () => {
   const [isCartMounting, setIsCartMounting] = useState(false);
   const [isCartCheckoutComplete, setIsCartCheckoutComplete] = useState(false);
   const [cartItems, setCartItems] = useState([
-    { id: 1, name: "Air Dynamic Pro", price: 180, img: "/shoe1.png", quantity: 1 },
-    { id: 2, name: "Zoom Velocity", price: 165, img: "/shoe2.png", quantity: 1 }
+    { id: 1, name: "Air Dynamic Pro", price: 180, img: "shoe1.png", quantity: 1 },
+    { id: 2, name: "Zoom Velocity", price: 165, img: "shoe2.png", quantity: 1 }
   ]);
   const [isBookHovered, setIsBookHovered] = useState(false);
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -50,7 +50,7 @@ const Projects = () => {
       ];
       assets.forEach(img => {
         const i = new Image();
-        i.src = `/${img}`;
+        i.src = `${img}`;
         i.onload = () => setImagesReady(prev => ({ ...prev, [img]: true }));
       });
     }
@@ -96,34 +96,34 @@ const Projects = () => {
 
   const dimensionProducts = {
     Men: [
-      { id: 1, name: "Air Dynamic Pro", price: "$180", img: "/shoe1.png" },
-      { id: 2, name: "Zoom Velocity", price: "$165", img: "/shoe2.png" },
-      { id: 3, name: "Street Glide GT", price: "$140", img: "/shoe3.png" },
-      { id: 4, name: "Titan Performance", price: "$210", img: "/shoe4.png" },
-      { id: 5, name: "Cloud Walker 01", price: "$155", img: "/shoe5.png" },
-      { id: 6, name: "Neon Surge", price: "$195", img: "/shoe6.png" },
-      { id: 7, name: "Apex Elite", price: "$225", img: "/shoe1.png" },
-      { id: 8, name: "Terra Nova", price: "$170", img: "/shoe2.png" }
+      { id: 1, name: "Air Dynamic Pro", price: "$180", img: "shoe1.png" },
+      { id: 2, name: "Zoom Velocity", price: "$165", img: "shoe2.png" },
+      { id: 3, name: "Street Glide GT", price: "$140", img: "shoe3.png" },
+      { id: 4, name: "Titan Performance", price: "$210", img: "shoe4.png" },
+      { id: 5, name: "Cloud Walker 01", price: "$155", img: "shoe5.png" },
+      { id: 6, name: "Neon Surge", price: "$195", img: "shoe6.png" },
+      { id: 7, name: "Apex Elite", price: "$225", img: "shoe1.png" },
+      { id: 8, name: "Terra Nova", price: "$170", img: "shoe2.png" }
     ],
     Women: [
-      { id: 9, name: "Aura Luxe", price: "$175", img: "/shoe2.png" },
-      { id: 10, name: "Zen Harmony", price: "$150", img: "/shoe1.png" },
-      { id: 11, name: "Stellar Run", price: "$190", img: "/shoe6.png" },
-      { id: 12, name: "Swift Elegance", price: "$165", img: "/shoe5.png" },
-      { id: 13, name: "Luna Glide", price: "$145", img: "/shoe3.png" },
-      { id: 14, name: "Orbit Pink", price: "$200", img: "/shoe4.png" },
-      { id: 15, name: "Aura Swift", price: "$185", img: "/shoe6.png" },
-      { id: 16, name: "Prism Light", price: "$160", img: "/shoe5.png" }
+      { id: 9, name: "Aura Luxe", price: "$175", img: "shoe2.png" },
+      { id: 10, name: "Zen Harmony", price: "$150", img: "shoe1.png" },
+      { id: 11, name: "Stellar Run", price: "$190", img: "shoe6.png" },
+      { id: 12, name: "Swift Elegance", price: "$165", img: "shoe5.png" },
+      { id: 13, name: "Luna Glide", price: "$145", img: "shoe3.png" },
+      { id: 14, name: "Orbit Pink", price: "$200", img: "shoe4.png" },
+      { id: 15, name: "Aura Swift", price: "$185", img: "shoe6.png" },
+      { id: 16, name: "Prism Light", price: "$160", img: "shoe5.png" }
     ],
     Kids: [
-      { id: 17, name: "Little Bolt", price: "$85", img: "/shoe4.png" },
-      { id: 18, name: "Junior Speed", price: "$95", img: "/shoe3.png" },
-      { id: 19, name: "Play Ready", price: "$75", img: "/shoe2.png" },
-      { id: 20, name: "Kid's Zoom 10", price: "$110", img: "/shoe5.png" },
-      { id: 21, name: "Tiny Titan", price: "$65", img: "/shoe6.png" },
-      { id: 22, name: "Star Step", price: "$80", img: "/shoe1.png" },
-      { id: 23, name: "Neon Sprint", price: "$90", img: "/shoe4.png" },
-      { id: 24, name: "Little Titan", price: "$70", img: "/shoe3.png" }
+      { id: 17, name: "Little Bolt", price: "$85", img: "shoe4.png" },
+      { id: 18, name: "Junior Speed", price: "$95", img: "shoe3.png" },
+      { id: 19, name: "Play Ready", price: "$75", img: "shoe2.png" },
+      { id: 20, name: "Kid's Zoom 10", price: "$110", img: "shoe5.png" },
+      { id: 21, name: "Tiny Titan", price: "$65", img: "shoe6.png" },
+      { id: 22, name: "Star Step", price: "$80", img: "shoe1.png" },
+      { id: 23, name: "Neon Sprint", price: "$90", img: "shoe4.png" },
+      { id: 24, name: "Little Titan", price: "$70", img: "shoe3.png" }
     ]
   };
   
@@ -321,28 +321,28 @@ const Projects = () => {
   const shoes = [
     { 
       id: 1, 
-      src: '/shoe1.png',
+      src: 'shoe1.png',
       subtitle: "Men's HIIT Class Shoe",
       title: "Nike Air Zoom\nSuperRep",
       desc: "Synchronization Protocol 01: The Nike Air Zoom SuperRep is redesigned for high-intensity training. Zoom Air cushioning in the forefoot combines with a stable heel for maximum athletic performance."
     },
     { 
       id: 2, 
-      src: '/shoe2.png',
+      src: 'shoe2.png',
       subtitle: "Men's Running Shoe",
       title: "Nike ZoomX\nVaporfly NEXT%",
       desc: "Synchronization Protocol 02: Clear the path to record-breaking speeds. We've added more cushioning underfoot and reduced weight up top, giving you unprecedented energy return and comfort."
     },
     { 
       id: 3, 
-      src: '/shoe3.png',
+      src: 'shoe3.png',
       subtitle: "Men's Basketball Shoe",
       title: "LeBron 19\nSpace Jam",
       desc: "Synchronization Protocol 03: The LeBron 19 harnesses energy with a visible Max Air heel unit and thick, responsive Zoom Air under the forefoot. Designed to maximize your kinetic dynamics."
     },
     { 
       id: 4, 
-      src: '/shoe4.png',
+      src: 'shoe4.png',
       subtitle: "Men's Training Shoe",
       title: "Nike Metcon 8\nPremium",
       desc: "Synchronization Protocol 04: The gold standard for weight training. The Metcon 8 features a lighter, more breathable upper than the previous edition to complement our standard of durability."
