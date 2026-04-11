@@ -85,7 +85,7 @@ const Navbar = () => {
         {/* Desktop Links */}
         <nav className="home-navbar-links" style={{ display: 'flex', alignItems: 'center', gap: '2.4rem' }}>
           <Link to="/" style={{ ...navLinkStyle(location.pathname === '/'), color: location.pathname === '/' ? 'var(--accent)' : 'rgba(255,255,255,0.5)' }}>Home</Link>
-          <a href="/#services" style={{ ...navLinkStyle(false), color: 'rgba(255,255,255,0.5)' }}>Services</a>
+          <a href="#services" style={{ ...navLinkStyle(false), color: 'rgba(255,255,255,0.5)' }}>Services</a>
           <Link to="/projects" style={{ ...navLinkStyle(location.pathname === '/projects'), color: location.pathname === '/projects' ? 'var(--accent)' : 'rgba(255,255,255,0.5)' }}>Projects</Link>
         </nav>
 
@@ -179,7 +179,7 @@ const Navbar = () => {
         }}
       >
         <Link to="/" style={{ fontSize: '3rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em' }} onClick={() => setIsMenuOpen(false)}>Home</Link>
-        <a href="/#services" style={{ fontSize: '3rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em' }} onClick={() => setIsMenuOpen(false)}>Services</a>
+        <a href="#services" style={{ fontSize: '3rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em' }} onClick={() => setIsMenuOpen(false)}>Services</a>
         <Link to="/projects" style={{ fontSize: '3rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em' }} onClick={() => setIsMenuOpen(false)}>Projects</Link>
         <Link to="/contact" style={{ fontSize: '3rem', fontWeight: 800, color: '#fff', letterSpacing: '-0.04em' }} onClick={() => setIsMenuOpen(false)}>Contact</Link>
         

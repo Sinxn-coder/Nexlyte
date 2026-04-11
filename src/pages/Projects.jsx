@@ -128,14 +128,14 @@ const Projects = () => {
   };
   
   const newReleasesProducts = [
-    { id: 101, name: "Air Max Pulse", price: "$150", img: "/shoe3.png" },
-    { id: 102, name: "Air Force 1 '07", price: "$115", img: "/shoe4.png" },
-    { id: 103, name: "Dunk Low Retro", price: "$120", img: "/shoe5.png" },
-    { id: 104, name: "Jordan Retro 4", price: "$210", img: "/shoe1.png" },
-    { id: 105, name: "VaporMax Plus", price: "$210", img: "/shoe6.png" },
-    { id: 106, name: "Invincible 3", price: "$180", img: "/shoe2.png" },
-    { id: 107, name: "Metcon 9 Premium", price: "$160", img: "/shoe4.png" },
-    { id: 108, name: "Blazer Mid '77", price: "$105", img: "/shoe3.png" }
+    { id: 101, name: "Air Max Pulse", price: "$150", img: "shoe3.png" },
+    { id: 102, name: "Air Force 1 '07", price: "$115", img: "shoe4.png" },
+    { id: 103, name: "Dunk Low Retro", price: "$120", img: "shoe5.png" },
+    { id: 104, name: "Jordan Retro 4", price: "$210", img: "shoe1.png" },
+    { id: 105, name: "VaporMax Plus", price: "$210", img: "shoe6.png" },
+    { id: 106, name: "Invincible 3", price: "$180", img: "shoe2.png" },
+    { id: 107, name: "Metcon 9 Premium", price: "$160", img: "shoe4.png" },
+    { id: 108, name: "Blazer Mid '77", price: "$105", img: "shoe3.png" }
   ];
 
   const categoryProducts = {
@@ -1555,19 +1555,19 @@ const Projects = () => {
           <div style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', zIndex: 10 }}>
             {/* Ghost Layer 02 */}
             <img 
-              src="/snap_master.png"
+              src="snap_master.png"
               alt="Ghost 2"
               style={{ position: 'absolute', height: '95%', transform: 'translateX(-45px) translateY(-5px) skew(-2deg)', opacity: 0.1, filter: 'grayscale(1) contrast(1.2)' }}
             />
             {/* Ghost Layer 01 */}
             <img 
-              src="/snap_master.png"
+              src="snap_master.png"
               alt="Ghost 1"
               style={{ position: 'absolute', height: '95%', transform: 'translateX(-22px) translateY(-2px) skew(-1deg)', opacity: 0.25, filter: 'grayscale(0.5)' }}
             />
             {/* Main Subject */}
             <img 
-              src="/snap_master.png" 
+              src="snap_master.png" 
               alt="Snap Master Focal" 
               style={{ position: 'relative', height: '95%', objectFit: 'contain', zIndex: 15 }}
             />

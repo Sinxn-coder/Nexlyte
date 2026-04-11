@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Home, ShoppingCart, Plus, Heart, User, ArrowLeft, Star, X, Trash2, Minus } from 'lucide-react';
 
 const SHOES_DB = [
-  { id: 1, brand: "Men's Shoes", name: "Creter Impact", price: 77.65, category: 'Lifestyle', img: "/shoe3.png" },
-  { id: 2, brand: "Men's Shoes", name: "Air Max Pre-Day", price: 240.70, category: 'Running', img: "/shoe1.png" },
-  { id: 3, brand: "Men's Shoes", name: "Zoom Velocity", price: 165.00, category: 'Basketball', img: "/shoe2.png" },
-  { id: 4, brand: "Men's Shoes", name: "Titan Glide", price: 210.00, category: 'Training', img: "/shoe4.png" },
-  { id: 5, brand: "Men's Shoes", name: "Classic Low", price: 85.00, category: 'Lifestyle', img: "/shoe5.png" },
-  { id: 6, brand: "Women's Shoes", name: "Runner XT", price: 120.00, category: 'Running', img: "/shoe6.png" },
+  { id: 1, brand: "Men's Shoes", name: "Creter Impact", price: 77.65, category: 'Lifestyle', img: "shoe3.png" },
+  { id: 2, brand: "Men's Shoes", name: "Air Max Pre-Day", price: 240.70, category: 'Running', img: "shoe1.png" },
+  { id: 3, brand: "Men's Shoes", name: "Zoom Velocity", price: 165.00, category: 'Basketball', img: "shoe2.png" },
+  { id: 4, brand: "Men's Shoes", name: "Titan Glide", price: 210.00, category: 'Training', img: "shoe4.png" },
+  { id: 5, brand: "Men's Shoes", name: "Classic Low", price: 85.00, category: 'Lifestyle', img: "shoe5.png" },
+  { id: 6, brand: "Women's Shoes", name: "Runner XT", price: 120.00, category: 'Running', img: "shoe6.png" },
 ];
 
 export default function ShoeStoreMobile({ onExit }) {
@@ -190,7 +190,7 @@ export default function ShoeStoreMobile({ onExit }) {
                           <p style={{ color: '#fbcb15', fontSize: '15px', fontWeight: 700, marginBottom: '20px' }}>Up to 50%</p>
                           <button onClick={() => { setSelected(SHOES_DB[1]); setSelectedSize(4); setScreen('detail'); }} style={{ background: '#fbcb15', color: '#111', border: 'none', padding: '10px 20px', borderRadius: '999px', fontSize: '13px', fontWeight: 800, cursor: 'pointer' }}>Shop now</button>
                         </div>
-                        <img src="/shoe2.png" alt="Promo" style={{ position: 'absolute', right: '-40px', top: '15px', width: '220px', transform: 'rotate(-15deg)', pointerEvents: 'none', filter: 'drop-shadow(-10px 10px 15px rgba(0,0,0,0.4))' }} />
+                        <img src="shoe2.png" alt="Promo" style={{ position: 'absolute', right: '-40px', top: '15px', width: '220px', transform: 'rotate(-15deg)', pointerEvents: 'none', filter: 'drop-shadow(-10px 10px 15px rgba(0,0,0,0.4))' }} />
                       </div>
 
                       {/* Categories */}
@@ -201,7 +201,7 @@ export default function ShoeStoreMobile({ onExit }) {
                             <div key={c} onClick={() => setCategory(c)} style={{ display: 'flex', alignItems: 'center', gap: '8px', background: isActive ? '#fbcb15' : 'transparent', padding: isActive ? '8px 20px 8px 8px' : '8px 20px', borderRadius: '999px', flexShrink: 0, cursor: 'pointer', transition: 'all 0.2s' }}>
                               {isActive && (
                                 <div style={{ width: '32px', height: '32px', background: 'white', borderRadius: '50%', padding: '6px', display: 'flex', alignItems: 'center', justifyItems: 'center' }}>
-                                  <img src="/shoe1.png" style={{ width: '100%', objectFit: 'contain' }} />
+                                  <img src="shoe1.png" style={{ width: '100%', objectFit: 'contain' }} />
                                 </div>
                               )}
                               <span style={{ fontSize: '14px', fontWeight: isActive ? 800 : 700, color: isActive ? '#111' : '#888' }}>{c}</span>

@@ -34,9 +34,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Prepare index.html
-        run: cp _index.html index.html
-
       - name: Build project
         run: npm run build
 
