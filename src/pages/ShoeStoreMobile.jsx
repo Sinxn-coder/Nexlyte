@@ -154,7 +154,7 @@ export default function ShoeStoreMobile({ onExit }) {
               </div>
             )}
 
-            <div style={{ flex: 1, overflowY: 'auto' }}>
+            <div style={{ flex: 1, overflowY: 'auto', minHeight: 0 }}>
               
               {/* === HOME TAB === */}
               {navTab === 'home' && (

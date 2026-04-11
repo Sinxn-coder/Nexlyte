@@ -326,7 +326,7 @@ export default function MobileProjects() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            style={{ position: 'fixed', inset: 0, zIndex: 99999 }}
+            style={{ position: 'fixed', inset: 0, zIndex: 99999, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
           >
             <ShoeStoreMobile onExit={() => setActivePrototype(null)} />
           </motion.div>
@@ -337,7 +337,7 @@ export default function MobileProjects() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            style={{ position: 'fixed', inset: 0, zIndex: 99999 }}
+            style={{ position: 'fixed', inset: 0, zIndex: 99999, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}
           >
             <FitnessAppMobile onExit={() => setActivePrototype(null)} />
           </motion.div>

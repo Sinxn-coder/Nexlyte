@@ -105,7 +105,7 @@ export default function FitnessAppMobile({ onExit }) {
               </div>
             </div>
 
-            <div style={{ flex: 1, overflowY: 'auto' }}>
+            <div style={{ flex: 1, overflowY: 'auto', minHeight: 0 }}>
               <div style={{ padding: '0 24px' }}>
                 <h1 style={{ fontSize: '32px', fontWeight: 900, lineHeight: 1.15, marginBottom: '24px', maxWidth: '80%' }}>
                   Welcome to Your Pilates Session
@@ -218,7 +218,7 @@ export default function FitnessAppMobile({ onExit }) {
             </div>
 
             {/* Content Area */}
-            <div style={{ flex: 1, background: 'white', borderTopLeftRadius: '32px', borderTopRightRadius: '32px', marginTop: '-32px', position: 'relative', zIndex: 2, padding: '32px 24px', overflowY: 'auto', paddingBottom: '100px' }}>
+            <div style={{ flex: 1, background: 'white', borderTopLeftRadius: '32px', borderTopRightRadius: '32px', marginTop: '-32px', position: 'relative', zIndex: 2, padding: '32px 24px', overflowY: 'auto', minHeight: 0, paddingBottom: '100px' }}>
               
               <h2 style={{ fontSize: '26px', fontWeight: 900, marginBottom: '24px' }}>Pilates Primer</h2>
               
