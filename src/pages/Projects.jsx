@@ -1917,7 +1917,7 @@ const Projects = () => {
                     style={{ 
                       flex: isExpanded ? 3.5 : 0.8,
                       height: '500px',
-                      backgroundImage: isLoaded ? `linear-gradient(to bottom, rgba(0,0,0,${isExpanded ? 0.15 : 0.3}), rgba(0,0,0,${isExpanded ? 0.3 : 0.85})), url('/${work.img}')` : 'none',
+                      backgroundImage: isLoaded ? `linear-gradient(to bottom, rgba(0,0,0,${isExpanded ? 0.15 : 0.3}), rgba(0,0,0,${isExpanded ? 0.3 : 0.85})), url('${work.img}')` : 'none',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       backgroundColor: 'rgba(255,255,255,0.02)',
@@ -2059,7 +2059,7 @@ const Projects = () => {
                     style={{ 
                       aspectRatio: '3/4', 
                       background: 'rgba(255,255,255,0.02)', 
-                      backgroundImage: isLoaded ? `url('/${img}')` : 'none',
+                      backgroundImage: isLoaded ? `url('${img}')` : 'none',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       borderRadius: '16px', 
