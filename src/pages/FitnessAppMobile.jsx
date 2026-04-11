@@ -75,7 +75,7 @@ export default function FitnessAppMobile({ onExit }) {
   };
 
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, background: COLORS.bg, display: 'flex', flexDirection: 'column', color: COLORS.text, fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div style={{ position: 'fixed', inset: 0, height: '100dvh', zIndex: 9999, background: COLORS.bg, display: 'flex', flexDirection: 'column', color: COLORS.text, fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       
       {/* ── Exit Button (Floating Top Center) ── */}
       <button 

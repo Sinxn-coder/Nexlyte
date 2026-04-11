@@ -161,7 +161,8 @@ function ProjectModal({ p, onClose }) {
           width: '100%', borderRadius: '28px',
           background: 'rgba(12,12,15,.98)',
           border: `1px solid ${p.border}`,
-          overflow: 'hidden'
+          overflowY: 'auto',
+          maxHeight: '90vh'
         }}
       >
         {/* colored accent top */}

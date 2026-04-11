@@ -97,7 +97,7 @@ export default function ShoeStoreMobile({ onExit }) {
   );
 
   return (
-    <div style={{ position: 'fixed', inset: 0, zIndex: 9999, background: '#f5f6f8', display: 'flex', flexDirection: 'column', color: '#111', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div style={{ position: 'fixed', inset: 0, height: '100dvh', zIndex: 9999, background: '#f5f6f8', display: 'flex', flexDirection: 'column', color: '#111', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       
       {/* ── Toast Notification ── */}
       <AnimatePresence>
@@ -394,7 +394,7 @@ export default function ShoeStoreMobile({ onExit }) {
 
         {/* ======================= DETAIL SCREEN ======================= */}
         {screen === 'detail' && selected && (
-          <motion.div key="detail" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} transition={{ duration: 0.3 }} style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', background: '#fff', overflow: 'hidden' }}>
+          <motion.div key="detail" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} transition={{ duration: 0.3 }} style={{ flex: 1, display: 'flex', flexDirection: 'column', position: 'relative', background: '#fff', overflowY: 'auto', paddingBottom: '40px' }}>
             
             {/* The Black Right Panel */}
             <div style={{ position: 'absolute', right: 0, top: 0, bottom: 0, width: '42%', background: '#111', borderTopLeftRadius: '60px', borderBottomLeftRadius: '60px', zIndex: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
